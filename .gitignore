@@ -27,3 +27,7 @@ Manifest*.toml
 LocalPreferences.toml
 JuliaLocalPreferences.toml
 /Dog_1/
+
+__pycache__/
+*.py[cod]
+*$py.class
