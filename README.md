@@ -83,10 +83,38 @@ Possible future improvements include:
 ![alt text](class_counts.png)
 
 # Ezek azt mutatják, hogy egy adott elektródát tekintve mind preiktális, mind pedig interiktális minta esetén mennyiben tér el az adott feature érték
-![alt text](boxplot_c005_max.png) 
-![alt text](boxplot_c005_mean.png) 
-![alt text](boxplot_c005_median.png) 
-![alt text](boxplot_c005_min.png) 
-![alt text](boxplot_c005_q25.png) 
-![alt text](boxplot_c005_q75.png) 
+![alt text](boxplot_c005_max.png)
+![alt text](boxplot_c005_mean.png)
+![alt text](boxplot_c005_median.png)
+![alt text](boxplot_c005_min.png)
+![alt text](boxplot_c005_q25.png)
+![alt text](boxplot_c005_q75.png)
 ![alt text](boxplot_c005_std.png)
+
+![confusion_matrix.png](confusion_matrix.png)
+A fenti képen a confusion mátrix látható, amely klasszifikálja a tesztelési mintákat, aszerint, hogy ezt mennyire pontosan találta el, vagyis "true positive", "true negative", "false positive", "false negative". A képen minél sötétebb a  téglalap, annál gyakrabban esett abba a katergóriába.
+Pred 1 + True 1 = true positive, Pred 1 + True 0 = false positive, stb,,,
+![feature_heatmap_train.png](feature_heatmap_train.png)
+Ezen a heatmap-en az interictális standardizált feature-ök jelennek meg, rajta látjató, hogy vannak-e feature mintázatok, amelyek osztályok szerint elválnak.
+
+![pca_train.png](pca_train.png)
+A PCA projekció pedig a sokdimenziós adatokat 2D-re vetíti le. PC1 szerinti interictális, illetve preictális mintákat ábrázolja. Látható, hogy ezek nem szeparálhatóak lineárisan, vagyis túlságosan hasonlóak a minták (adott feature szerint).
+
+
+![pfe_heatmap_Dog_1_interictal_segment_0001.png](pfe_heatmap_Dog_1_interictal_segment_0001.png)
+Ezen a heatmap-en látszik a permutation fuzzy entropy kimenete a legelső interictális bemeneti állománynak, vagyis az adott bemeneti mátrix PFE-átalakítás után. Látható, hogy vannak csatornák, amelyek időben nagoyn más PFE mintát mutatnak.
+
+
+![pfe_heatmap_Dog_1_preictal_segment_0001.png](pfe_heatmap_Dog_1_preictal_segment_0001.png)
+
+Hasonlóan, de ebben az esetben a legelső preictális bemenetet vizsgáljuk.
+
+![pfe_series_c005_Dog_1_interictal_segment_0001.png](pfe_series_c005_Dog_1_interictal_segment_0001.png)
+![pfe_series_c005_Dog_1_interictal_segment_0001.png](pfe_series_c005_Dog_1_interictal_segment_0001.png)
+A fenti ábra megmutatja, hogy hogyan néz ki egy általános interictális bemenet.
+
+![pfe_series_c005_Dog_1_preictal_segment_0001.png](pfe_series_c005_Dog_1_preictal_segment_0001.png)
+Ez pedig hasonlóan, egy általános preictális bemeneti jel.
+
+![top_feature_differences_train.png](top_feature_differences_train.png)
+Ezen az ábrán az első 20 legeltérőbb bemeneti minta van ábrázolva. Az eltérést az interictális és preictális minták között vizsgáltuk. Látszik, hogy legfenneb ~0.02, vagyis parányi 2% eltérést tudtunk észlelni.
