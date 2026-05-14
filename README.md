@@ -78,3 +78,15 @@ Possible future improvements include:
 - comparing SVM with other machine learning models
 - applying deep learning approaches
 - exploring patient-specific prediction models
+
+# Ez az ábra azt szemlélteti, hogy hány interiktális és hány preiktális teszt adatot sikerült helyesen prediktálni.
+![alt text](class_counts.png)
+
+# Ezek azt mutatják, hogy egy adott elektródát tekintve mind preiktális, mind pedig interiktális minta esetén mennyiben tér el az adott feature érték
+![alt text](boxplot_c005_max.png) 
+![alt text](boxplot_c005_mean.png) 
+![alt text](boxplot_c005_median.png) 
+![alt text](boxplot_c005_min.png) 
+![alt text](boxplot_c005_q25.png) 
+![alt text](boxplot_c005_q75.png) 
+![alt text](boxplot_c005_std.png)
